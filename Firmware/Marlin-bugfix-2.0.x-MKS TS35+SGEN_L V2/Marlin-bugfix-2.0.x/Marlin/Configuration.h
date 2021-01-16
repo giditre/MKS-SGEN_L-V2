@@ -1188,7 +1188,7 @@
  * For other boards you may need to define FIL_RUNOUT_PIN, FIL_RUNOUT2_PIN, etc.
  */
 #define FILAMENT_RUNOUT_SENSOR
-#define FIL_RUNOUT_PIN P1_28 // edited: reuse the pin for X_MAX - TO BE CHECKED
+#define FIL_RUNOUT_PIN P0_02 // edited: using one of AUX1 pins and connecting Normally Open endstop from that pin to GND, therefore needing PULLUP and active HIGH - TO BE CHECKED
 #if ENABLED(FILAMENT_RUNOUT_SENSOR)
   #define FIL_RUNOUT_ENABLED_DEFAULT true // Enable the sensor on startup. Override with M412 followed by M500.
   #define NUM_RUNOUT_SENSORS   1          // Number of sensors, up to one per extruder. Define a FIL_RUNOUT#_PIN for each.
@@ -1770,8 +1770,8 @@
  * Disable all menus and only display the Status Screen, or
  * just remove some extraneous menu items to recover space.
  */
-//#define NO_LCD_MENUS
-//#define SLIM_LCD_MENUS
+// #define NO_LCD_MENUS
+// #define SLIM_LCD_MENUS
 
 //
 // ENCODER SETTINGS
