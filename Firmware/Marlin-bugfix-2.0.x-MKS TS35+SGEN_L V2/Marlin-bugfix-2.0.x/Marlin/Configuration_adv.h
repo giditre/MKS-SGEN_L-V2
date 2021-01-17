@@ -2229,7 +2229,7 @@
   #define INTERPOLATE       true  // Interpolate X/Y/Z_MICROSTEPS to 256
 
   #if AXIS_IS_TMC(X)
-    #define X_CURRENT       720        // (mA) RMS current. Multiply by 1.414 for peak current. // edited: to be checked
+    #define X_CURRENT       720        // (mA) RMS current. Multiply by 1.414 for peak current. // edited: TODO to be checked
     #define X_CURRENT_HOME  X_CURRENT  // (mA) RMS current for sensorless homing
     #define X_MICROSTEPS     16    // 0..256 // edited: checked
     #define X_RSENSE          0.11
@@ -2245,7 +2245,7 @@
   #endif
 
   #if AXIS_IS_TMC(Y)
-    #define Y_CURRENT       800 // edited: to be checked
+    #define Y_CURRENT       720 // edited: TODO to be checked
     #define Y_CURRENT_HOME  Y_CURRENT
     #define Y_MICROSTEPS     16
     #define Y_RSENSE          0.11
@@ -2261,7 +2261,7 @@
   #endif
 
   #if AXIS_IS_TMC(Z)
-    #define Z_CURRENT       800 // edited: to be checked
+    #define Z_CURRENT       720 // edited: TODO to be checked
     #define Z_CURRENT_HOME  Z_CURRENT
     #define Z_MICROSTEPS     16
     #define Z_RSENSE          0.11
@@ -2293,7 +2293,7 @@
   #endif
 
   #if AXIS_IS_TMC(E0)
-    #define E0_CURRENT      800 // edited: to be checked
+    #define E0_CURRENT      720 // edited: TODO to be checked
     #define E0_MICROSTEPS    16
     #define E0_RSENSE         0.11
     #define E0_CHAIN_POS     -1
@@ -2393,19 +2393,19 @@
   #define  X_SLAVE_ADDRESS 0
   #define  Y_SLAVE_ADDRESS 0
   #define  Z_SLAVE_ADDRESS 0
-  #define X2_SLAVE_ADDRESS 0
-  #define Y2_SLAVE_ADDRESS 0
-  #define Z2_SLAVE_ADDRESS 0
-  #define Z3_SLAVE_ADDRESS 0
-  #define Z4_SLAVE_ADDRESS 0
+  // #define X2_SLAVE_ADDRESS 0
+  // #define Y2_SLAVE_ADDRESS 0
+  // #define Z2_SLAVE_ADDRESS 0
+  // #define Z3_SLAVE_ADDRESS 0
+  // #define Z4_SLAVE_ADDRESS 0
   #define E0_SLAVE_ADDRESS 0
-  #define E1_SLAVE_ADDRESS 0
-  #define E2_SLAVE_ADDRESS 0
-  #define E3_SLAVE_ADDRESS 0
-  #define E4_SLAVE_ADDRESS 0
-  #define E5_SLAVE_ADDRESS 0
-  #define E6_SLAVE_ADDRESS 0
-  #define E7_SLAVE_ADDRESS 0
+  // #define E1_SLAVE_ADDRESS 0
+  // #define E2_SLAVE_ADDRESS 0
+  // #define E3_SLAVE_ADDRESS 0
+  // #define E4_SLAVE_ADDRESS 0
+  // #define E5_SLAVE_ADDRESS 0
+  // #define E6_SLAVE_ADDRESS 0
+  // #define E7_SLAVE_ADDRESS 0
 
   /**
    * Software enable
@@ -2549,7 +2549,7 @@
    * Enable M122 debugging command for TMC stepper drivers.
    * M122 S0/1 will enable continous reporting.
    */
-  #define TMC_DEBUG // edited: uncommented
+  // #define TMC_DEBUG
 
   /**
    * You can set your own advanced settings by filling in predefined functions.
@@ -3517,12 +3517,12 @@
 //
 // M100 Free Memory Watcher to debug memory usage
 //
-//#define M100_FREE_MEMORY_WATCHER
+// #define M100_FREE_MEMORY_WATCHER
 
 //
 // M43 - display pin status, toggle pins, watch pins, watch endstops & toggle LED, test servo probe
 //
-//#define PINS_DEBUGGING
+#define PINS_DEBUGGING
 
 // Enable Marlin dev mode which adds some special commands
 //#define MARLIN_DEV_MODE
